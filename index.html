@@ -13,24 +13,26 @@
 <body class="">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- -----Home---- -->
-    <section class="md:hidden">
-      <div class="min-h-screen flex flex-col items-center justify-center space-y-4 text-white">
+    <section id="home-screen" class="min-h-screen flex flex-col items-center justify-center">
+      <div class="space-y-4 text-white">
         <h1 class="text-8xl font-bold">ALPHABET CLASH
         </h1>
-        <p class="">Unleash Your Keyboard Kung Fu : Press “Enter” to Play </p>
-        <button class="btn btn-active text-white">Play Now</button>
-      </div>
+       
+        <p class="text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play </p>
+        <div class="flex items-center justify-center"><button onclick="play()" class="btn btn-active text-white ">Play Now</button></div>
+       </div>
+  
     </section>
 
     <!-- --------Play------ -->
 
-    <section>
+    <section id="play-ground" class="pt-20 hidden">
       
         <div class="">
               
 
             <!-- .....Art bord Screen Area ...... -->
-             <div class="flex justify-center items-center">
+             <div class="flex justify-center items-center pb-16">
                 <div class="artboard artboard-horizontal phone-6 border-8 border-[#010313CC]  rounded-[20px] bg-[#FFFFFFB3] ">
                     <div class="flex justify-center"><p class="bg-[#2F2941] text-white w-96 py-3 px-2 rounded-b-xl">Don't watch keyboard while playing... 
                     </p>
@@ -41,7 +43,7 @@
              </div>
 
              <!-- .....Keybord Area....... -->
-             <div class="pt-60">
+             <div class="">
                 <div class="my-1 flex w-full justify-center gap-1">
                     <kbd class="kbd">q</kbd>
                     <kbd class="kbd">w</kbd>
@@ -78,7 +80,7 @@
                </div>
 
             <!-- ... Love icon Area .... -->
-               <div class="flex justify-between  p-48">
+               <div class="flex justify-between items-center mx-32">
                 <div><button class="btn px-10 rounded-2xl bg-[#894189] text-white border-none text-xl">
                 Life
 
@@ -100,11 +102,22 @@
 
         </div>
     </section>
-    <!-- -------Play score----- -->
-    <section>
+    <!-- bg-gradient-to-r from-[#FFFFFF] to-[#989797] -->
+    <section class="flex flex-col items-center min-h-screen justify-center hidden">
+          <!-- -------Play score----- -->
+     
+        <div class="text-white space-y-4 bg-[#FFFFFF33] py-3 px-4 rounded-2xl">
+            <h1 class="text-6xl font-bold">Score:14</h1>
+            <div class="flex flex-col  items-center space-y-3">
+                <button class=" btn ">Play Again</button>
+            <p>Practice will make you Pro</p>
+            </div>
+         </div>
 
     </section>
 </main>
 
+<script src="./js/alpha-clash.js"></script>
+<script src="./js/utility.js"></script>
 </body>
 </html>
